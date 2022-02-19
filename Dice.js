@@ -1,5 +1,5 @@
 var mockDatabase = [
-    { _id: '123', name: 'Zeus Dice', published: true },
+    { _id: '123', name: 'Zeus Dice', published: false },
     { _id: '583', name: 'Athena Dice', published: true },
     { _id: '954', name: 'Ares Dice', published: false },
     { _id: '384', name: 'Hephaestus Dice', published: false },
@@ -26,7 +26,7 @@ function renderList (results) {
 
 }
 
-renderList(mockDatabase);
+
 
 function togglePublished(showPublished) {
     var filteredResults = mockDatabase.filter(function (result) {
