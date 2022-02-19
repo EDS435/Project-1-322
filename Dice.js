@@ -10,6 +10,7 @@ var mockDatabase = [
     { _id: '734', name: 'Demeter Dice', published: true },
 ];
 
+
 // Renders Current Selection of Products into Dom
 function renderList (results) {
     const productDiv = document.querySelector('#products');
@@ -26,15 +27,20 @@ function renderList (results) {
 
 }
 
-
-
 function togglePublished(showPublished) {
     var filteredResults = mockDatabase.filter(function (result) {
         return showPublished || result.published;
     });
     renderList(filteredResults);
 }
+
 document.querySelector('#published').addEventListener('change', function(event){
     var value = event.target.value === 'true';
+    togglePublished(value);
+});
+
+
+document.querySelector('#price').addEventListener('change', function(event){
+    var value = event.target.value === 'false';
     togglePublished(value);
 });
