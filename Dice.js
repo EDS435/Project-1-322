@@ -1,13 +1,13 @@
 var mockDatabase = [
-    { _id: '123', name: 'Zeus Dice', published: false },
-    { _id: '583', name: 'Athena Dice', published: true },
-    { _id: '954', name: 'Ares Dice', published: false },
-    { _id: '384', name: 'Hephaestus Dice', published: false },
-    { _id: '183', name: 'Apollo Dice', published: true },
-    { _id: '007', name: 'Hypnos Dice', published: false },
-    { _id: '304', name: 'Nike Dice', published: true },
-    { _id: '729', name: 'Aphrodite Dice', published: false },
-    { _id: '734', name: 'Demeter Dice', published: true },
+    { _id: '000', name: 'Zeus Dice', published: false },
+    { _id: '001', name: 'Athena Dice', published: true },
+    { _id: '002', name: 'Ares Dice', published: false },
+    { _id: '003', name: 'Hephaestus Dice', published: false },
+    { _id: '004', name: 'Apollo Dice', published: true },
+    { _id: '005', name: 'Hypnos Dice', published: false },
+    { _id: '006', name: 'Nike Dice', published: true },
+    { _id: '007', name: 'Aphrodite Dice', published: false },
+    { _id: '008', name: 'Demeter Dice', published: true },
 ];
 
 
@@ -41,6 +41,6 @@ document.querySelector('#published').addEventListener('change', function(event){
 
 
 document.querySelector('#price').addEventListener('change', function(event){
-    var value = event.target.value === 'false';
+    var value = event.target.value === 'true';
     togglePublished(value);
 });
